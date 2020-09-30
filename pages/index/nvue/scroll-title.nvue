@@ -1,0 +1,26 @@
+<template>
+	<div class="scroll-title-container">
+		<div class="scroll-title">123456</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style>
+	.scroll-title-container{
+		width: 565rpx;
+		height: 60rpx;
+		background-color: #007AFF;
+		
+	}
+	
+	.scroll-title{
+		width:100%;
+		height: 100%;
+		background-color: red;
+	}
+</style>
