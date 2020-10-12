@@ -1,0 +1,18 @@
+.u-steps .u-steps__item{
+	font-size: 20rpx!important;
+}
+
+.u-steps__item--column{
+	min-height: 70rpx!important;
+	padding-left: 20rpx;
+}
+
+.u-steps__item__dot{
+	width: 10rpx!important;
+	height: 10rpx!important;
+}
+
+.u-steps .u-steps__item--column .u-steps__item__line--dot{
+	left: calc(10rpx / 2)!important;
+	padding-left: 20rpx;
+}

@@ -19,7 +19,7 @@
 		</view>
 		<view class="device-control-container">
 			
-			<view v-for="(item,index) in controlMenu" :key="index" class="control-item" @click="testWs">
+			<view v-for="(item,index) in controlMenu" :key="index" class="control-item" @click="btnClick(item)">
 				<luButtonRipple :rippleBackgroundColor="item.rippleColor" :rippleOpacity="item.rippleOpcity" :buttonRippleId="item.id">
 					<view class="icon" :class="item.icon"></view>
 					<text class="title">{{item.name}}</text>
@@ -49,13 +49,13 @@
 					{id:4,name:'灭火喷雾',icon:'icon-extingguishing',rippleColor:'#A5C3FF',rippleOpcity:1},
 					{id:5,name:'灯光',icon:'icon-light',rippleColor:'#A5C3FF',rippleOpcity:1},
 					{id:6,name:'小车充电',icon:'icon-recharge',rippleColor:'#A5C3FF',rippleOpcity:1},
-					{id:7,name:'其他',icon:'icon-others',rippleColor:'#A5C3FF',rippleOpcity:1},
+					{id:7,name:'其他',icon:'icon-others',rippleColor:'#A5C3FF',rippleOpcity:1,route:'/pages/task/task'},
 				]
 			}
 		},
 		onLoad() {
-			const subNvue = uni.getSubNVueById("ScrollTitle");
-			subNvue.show()
+			//const subNvue = uni.getSubNVueById("ScrollTitle");
+			//subNvue.show()
 		},
 		methods: {
 			videoErrorCallback: function(e) {
@@ -64,8 +64,12 @@
 					showCancel: false
 				})
 			},
-			testWs(){
-				
+			btnClick(item){
+				if(item.route){
+					uni.navigateTo({
+					    url: item.route
+					});
+				}
 			}
 		}
 	}
