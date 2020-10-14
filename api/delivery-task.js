@@ -11,3 +11,16 @@ export const deliveryTask = (params) => {
     params
   })
 }
+
+
+export const startTask = (data) => {
+	return http.post('/api/patroltask/run',data,{
+		custom:{isToken:true}
+	})
+}
+
+export const taskStepFinished = (data) => {
+	return http.post('/api/patroltask/delivery_finished', data,{
+		custom:{isToken:true}
+	})
+}

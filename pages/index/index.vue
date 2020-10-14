@@ -17,6 +17,7 @@
 			></video>
 			
 		</view>
+		
 		<view class="device-control-container">
 			
 			<view v-for="(item,index) in controlMenu" :key="index" class="control-item" @click="btnClick(item)">

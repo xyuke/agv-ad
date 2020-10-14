@@ -77,7 +77,8 @@ http.interceptors.request.use((config) => { /* 请求之前拦截器。可以使
   config.header = {
     ...config.header,
   }
-  if(config.meta && config.meta.isToken){
+  
+  if(config.custom && config.custom.isToken){
 	config.header['token'] = getTokenStorage()  
   }
   return config
@@ -90,7 +91,14 @@ http.interceptors.response.use(async (response) => { /* 请求之后拦截器。
   // if (response.data.code !== 200) { // 服务端返回的状态码不等于200，则reject()
   //   return Promise.reject(response)
   // }
-  return response
+	
+	console.log("------------返回信息------------")
+	console.log(response)
+	if(response.data.code != 0){
+		return Promise.reject(response)
+	}
+  
+	return response
 }, (response) => { // 请求错误做点什么。可以使用async await 做异步操作
   console.log(response)
   return Promise.reject(response)

@@ -1,18 +1,23 @@
 .u-steps .u-steps__item{
-	font-size: 20rpx!important;
+	font-size: 15rpx!important;
 }
 
 .u-steps__item--column{
-	min-height: 70rpx!important;
-	padding-left: 20rpx;
+	min-height: 44rpx!important;
+	padding-left: 16.5rpx;
 }
 
 .u-steps__item__dot{
-	width: 10rpx!important;
-	height: 10rpx!important;
+	width: 5.5rpx!important;
+	height: 5.5rpx!important;
 }
 
 .u-steps .u-steps__item--column .u-steps__item__line--dot{
-	left: calc(10rpx / 2)!important;
-	padding-left: 20rpx;
+	left: calc(5.5rpx / 2)!important;
+	padding-left: 16.5rpx;
+}
+
+.u-tips{
+	font-size: 15rpx!important;
+	padding: 8rpx 10rpx!important;
 }
